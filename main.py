@@ -5,7 +5,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 
 # 데이터셋 로드 (일단 모든 feature에 데이터를 사용)
 housing = fetch_california_housing()
-X = housing.data
+X = housing.data[:, [0, 2, 6, 1]] 
 y = housing.target
 
 # train/test split
